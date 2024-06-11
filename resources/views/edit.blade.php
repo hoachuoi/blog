@@ -8,6 +8,7 @@
     <title>Create</title>
 </head>
 <body>
+<a href="/"><button>Home</button></a>
 <form class="fomr1" action="/blogs/{{$blog->id}}" method="POST">
     @method('PUT')
     @csrf
@@ -22,7 +23,7 @@
     <br>
     <button type="submit">Cập nhật Blog</button>
 </form>
-<a href="/"><button>trở về</button></a>
+
 @if(session('success'))
     <div id="alert" class="alert alert-success">
         {{ session('success') }}
